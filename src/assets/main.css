@@ -3,4 +3,5 @@
 @theme {
   --font-Inter: 'Inter', sans-serif;
   --color-primary: #fca004;
+  --grid-cols-response: repeat(3, minmax(280px, 1fr));
 }
