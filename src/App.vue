@@ -1,19 +1,18 @@
 <template>
-  <header class="flex flex-col items-center gap-1 py-4 bg-primary" >
+  <header class="flex flex-col items-center gap-1 py-4 bg-primary">
     <router-link to="/" class="outline-hidden">
       <h1 class="text-4xl font-black tracking-wider text-white">Found Books</h1>
     </router-link>
 
-    <section class="flex flex-row gap-4" >
+    <section class="flex flex-row gap-4">
       <InputSelect
         :selected="selected"
         :selectValues="valuesSelect"
-        :functionChangeValue = "setValueSelected"
-        :functionChangeSelect = "setSelected"
+        :functionChangeValue="setValueSelected"
+        :functionChangeSelect="setSelected"
       />
 
       <SearchBar />
-
     </section>
   </header>
   <RouterView />
@@ -25,7 +24,7 @@ import { useSelectSearchStore } from '@/stores/useSelectSearchStore'
 import type { selectOption } from '@/interfaces/selectOption'
 import InputSelect from '@/components/InputSelect.vue'
 
-const valuesSelect : selectOption[] = [
+const valuesSelect: selectOption[] = [
   {
     value: 'title',
     text: 'Título'
@@ -37,8 +36,8 @@ const valuesSelect : selectOption[] = [
   {
     value: 'isbn',
     text: 'ISBN'
-  },
+  }
 ]
 
-const { selected ,setSelected, setValueSelected} = useSelectSearchStore()
+const { selected, setSelected, setValueSelected } = useSelectSearchStore()
 </script>

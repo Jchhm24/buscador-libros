@@ -72,10 +72,7 @@ onMounted(() => {
   window.addEventListener('click', (e) => {
     const target = e.target as HTMLElement
     if (!target.closest('.options-select') && !target.closest('.w-max')) {
-      changeStateTo
-      (false
-        
-      )
+      changeStateTo(false)
     }
   })
 })

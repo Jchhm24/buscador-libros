@@ -13,9 +13,7 @@
   </svg>
 </template>
 <script setup lang="ts">
-
 const props = defineProps<{
   classes?: string
 }>()
-
 </script>

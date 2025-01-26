@@ -17,7 +17,7 @@ export const bookApi = () => {
         author_name: book.author_name,
         first_publish_year: book.first_publish_year,
         cover_i: book.cover_i,
-        coverUrl: book.cover_i ? `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg` : null,
+        coverUrl: book.cover_i ? `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg` : null
       }))
 
       //console.log('Books found:', booksFound)

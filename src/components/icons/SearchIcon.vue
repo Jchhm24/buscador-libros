@@ -17,7 +17,7 @@
 const props = defineProps({
   classes: {
     type: String,
-    default: '',
-  },
+    default: ''
+  }
 })
 </script>

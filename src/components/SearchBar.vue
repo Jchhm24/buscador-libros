@@ -23,5 +23,4 @@ const search = ref<string>('')
 watch(search, async (newValue) => {
   await apiService.getBooks(newValue)
 })
-
 </script>

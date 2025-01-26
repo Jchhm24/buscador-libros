@@ -5,14 +5,14 @@
       :key="index"
       class="flex flex-row gap-4 border-2 border-gray-600/25 rounded-lg overflow-hidden p-4"
     >
-      <img :src="item.coverUrl" :alt="item.title"
+      <img
+        :src="item.coverUrl"
+        :alt="item.title"
         class="object-cover min-w-[160px] rounded-lg shadow-lg"
         v-if="item.coverUrl"
       />
 
-      <div v-else
-        class="min-w-[160px] bg-gray-200 rounded-lg shadow-lg">
-      </div>
+      <div v-else class="min-w-[160px] bg-gray-200 rounded-lg shadow-lg"></div>
 
       <article class="flex flex-col gap-2">
         <h2 class="text-xl font-bold">

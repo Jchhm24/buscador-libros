@@ -1,15 +1,15 @@
-import type { Book } from "@/interfaces/Books";
-import { defineStore } from "pinia";
-import { ref } from "vue";
+import type { Book } from '@/interfaces/Books'
+import { defineStore } from 'pinia'
+import { ref } from 'vue'
 
-export const useSearchFoundStore = defineStore('searchFound',() => {
+export const useSearchFoundStore = defineStore('searchFound', () => {
   const searchFound = ref<Book[]>([])
 
-  const setSearchFound = (books: Book[]) : void => {
+  const setSearchFound = (books: Book[]): void => {
     searchFound.value = books
   }
 
-  const getSearchFound = () : Book[] => {
+  const getSearchFound = (): Book[] => {
     return searchFound.value
   }
 
@@ -18,5 +18,4 @@ export const useSearchFoundStore = defineStore('searchFound',() => {
     setSearchFound,
     getSearchFound
   }
-
 })
