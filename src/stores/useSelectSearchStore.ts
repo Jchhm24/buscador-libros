@@ -15,6 +15,7 @@ export const useSelectSearchStore = defineStore('selectSearch', () => {
 
   return {
     selected,
+    valueSelected,
     setSelected,
     setValueSelected
   }

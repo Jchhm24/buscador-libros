@@ -13,6 +13,8 @@
 import { ref, watch } from 'vue'
 import SearchIcon from './icons/SearchIcon.vue'
 import { bookApi } from '@/services/bookApi'
+import { useSelectSearchStore } from '@/stores/useSelectSearchStore'
+import { storeToRefs } from 'pinia'
 
 const apiService = bookApi()
 
@@ -20,7 +22,18 @@ const placeholder = ref<string>('Escribe el nombre del libro')
 
 const search = ref<string>('')
 
+const store = useSelectSearchStore()
+const {valueSelected} = storeToRefs(store)
+
 watch(search, async (newValue) => {
-  await apiService.getBooks(newValue)
+
+  if(valueSelected.value === 'title'){
+    await apiService.getBooks(newValue)
+  } else if(valueSelected.value === 'author'){
+    await apiService.getByAuthors(newValue)
+  } else if(valueSelected.value === 'isbn'){
+    await apiService.getByISBN(newValue)
+  }
+
 })
 </script>
