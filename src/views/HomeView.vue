@@ -19,14 +19,12 @@
           {{ item.title }}
         </h2>
 
-        <router-link to="/[author]" :params="{ author: item.author_name.join(', ') }">
           <span>
             Por:
             <span class="text-sky-500 underline">
               {{ item.author_name.join(', ') }}
             </span>
           </span>
-        </router-link>
 
         <span> Publicado el: {{ item.first_publish_year }} </span>
       </article>
